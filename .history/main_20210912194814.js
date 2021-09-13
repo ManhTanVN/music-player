@@ -79,8 +79,8 @@ const MUSIC_STORAGE_KEY = {}
 let musicIndex = Math.floor(Math.random() * allMusics.length + 1)
 
 let config = JSON.parse(localStorage.getItem(MUSIC_STORAGE_KEY)) || {}
+loadConfig()
 window.addEventListener('load', () => {
-    loadConfig()
     loadMusics(musicIndex)
     playingSongBar()
 
